@@ -24,10 +24,10 @@ usuariosPremium = ARGV[2].to_i
 usuariosGratuitos = ARGV[3].to_i
 gastos = ARGV[4].to_i
 
-dobleMonto = 2
+PAGA_DOBLE = 2
 
 # Operaación para calcular las utilidades:
-utilidades = (precio * usuariosComunes) + (precio * dobleMonto * usuariosPremium) - gastos
+utilidades = (precio * usuariosComunes) + (precio * usuariosPremium * PAGA_DOBLE) - gastos
 totalUsuarios = usuariosComunes + usuariosPremium + usuariosGratuitos
 # En el caso si el resultado es positivo se aplica el impuesto:
 if utilidades > 0
