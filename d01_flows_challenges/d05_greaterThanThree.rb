@@ -1,7 +1,18 @@
 =begin 
-    Desafio:
-    Crear un programa donde el usuario deba ingresar tres números.
-    El programa debe imprimir el mayor de los tres números.
+  DESAFIO: EL MAYOR DE TRES NÚMEROS
+
+  INSTRUCCIONES
+  Se pide crear el programa "d05_greaterThanThree.rb". Este script debe tomar los 3 argumentos y determinar cuál es el mayor.
+
+	Uso:
+	ruby d05_greaterThanThree.rb 10 5 3
+	10
+
+	ruby d05_greaterThanThree.rb -21 9 39
+	39
+
+	ruby d05_greaterThanThree.rb 3 2 3
+	3
 =end
 
 # Almacenar los inputs del usuario en variables
