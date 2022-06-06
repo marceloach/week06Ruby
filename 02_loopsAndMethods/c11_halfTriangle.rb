@@ -11,7 +11,7 @@
 num = ARGV[0].to_i
 
 num.times do |i|
-  i.times do
+  (i+1).times do
     print "*"
   end
   puts ""
