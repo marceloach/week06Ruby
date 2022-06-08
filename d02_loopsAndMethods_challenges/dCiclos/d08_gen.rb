@@ -26,6 +26,6 @@ def gen(n)
   print alphabet
 end
 
-gen(4) 
+gen(4) #abcd
 puts ""
-gen(10) 
+gen(10) #abcdefghij
