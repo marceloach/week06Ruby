@@ -18,3 +18,14 @@
 
   Tip: Partir con intento = 'a'.
 =end
+
+password = ARGV[0]
+letter = "a"
+intentos = 0
+
+while password != letter
+  letter = letter.next
+  intentos += 1
+end
+
+puts intentos
