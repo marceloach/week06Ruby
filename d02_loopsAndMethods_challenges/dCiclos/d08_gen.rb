@@ -17,10 +17,10 @@
 =end
 
 def gen(n)
-  alphabet = "a"
+  alphabet = ""
   letter = "a"
-  (n-1).times do
-    alphabet += letter.next
+  (n).times do
+    alphabet += letter
     letter = letter.next
   end
   print alphabet
