@@ -19,12 +19,15 @@
   Contando desde 10... 10 9 8 7 6 5 4 3 2 1
 =end
 
-DETENER = -1
+# DETENER = -1
 
 puts 'Ingrese un número para comenzar la cuenta:'
 cuenta_regresiva = ARGV[0].to_i
 puts "Contando desde #{cuenta_regresiva}..."
-while cuenta_regresiva != DETENER
-  puts cuenta_regresiva
-  cuenta_regresiva -= 1
-end
+# while cuenta_regresiva != DETENER
+#   puts cuenta_regresiva
+#   cuenta_regresiva -= 1
+# end
+
+# Otra manera de iterar
+cuenta_regresiva.downto(1) {|i| puts i}
