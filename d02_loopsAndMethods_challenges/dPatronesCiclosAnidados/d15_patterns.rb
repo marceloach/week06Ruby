@@ -92,14 +92,10 @@ def letra_i(n)
   # Sección del medio
   (n-2).times do # Filas
     print " "
-    (n-2).times do |j| # Columnas
-      if (j) % 3 == 1
-        print "*"
-      else
+    ((n/2)-1).times do # Columnas
         print " "
-      end # Cierre condicional del ciclo anidado
     end #Cierre ciclo anidado
-    print " "
+    print "*"
     puts ""
   end #Cierre ciclo padre
   
@@ -109,6 +105,31 @@ def letra_i(n)
   end
 end
 
+def letra_z(n)
+  # Sección de arriba
+  n.times do
+    print "*"
+  end
+  
+  puts ""
+  
+  # Sección del medio
+  (n-2).times do |i| # Filas
+    (n-2-i).times do # Columnas
+        print " "
+    end #Cierre ciclo anidado
+    print "*"
+    puts ""
+  end #Cierre ciclo padre
+  
+  # Sección de abajo
+  n.times do
+    print "*"
+  end
+end
+
+
+
 # Llamado de metodos
 
 input = ARGV[0].to_i
@@ -116,10 +137,5 @@ input = ARGV[0].to_i
 # letra_o(input)
 # puts ""
 # letra_i(input)
-
-puts ""
-
-input.times do |i|
-  print "#{i} -->"
-  puts i % 3
-end 
+# puts ""
+letra_z(input)
