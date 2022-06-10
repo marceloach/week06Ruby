@@ -55,7 +55,7 @@
    * * *
 =end
 
-# Definición de metodos
+# Definición de métodos
 
 def letra_o(n)
   # Sección de arriba
@@ -79,6 +79,7 @@ def letra_o(n)
   n.times do
     print "*"
   end
+  puts ""
 end
 
 def letra_i(n)
@@ -93,7 +94,7 @@ def letra_i(n)
   (n-2).times do # Filas
     print " "
     ((n/2)-1).times do # Columnas
-        print " "
+      print " "
     end #Cierre ciclo anidado
     print "*"
     puts ""
@@ -103,6 +104,7 @@ def letra_i(n)
   n.times do
     print "*"
   end
+  puts ""
 end
 
 def letra_z(n)
@@ -116,7 +118,7 @@ def letra_z(n)
   # Sección del medio
   (n-2).times do |i| # Filas
     (n-2-i).times do # Columnas
-        print " "
+      print " "
     end #Cierre ciclo anidado
     print "*"
     puts ""
@@ -126,11 +128,82 @@ def letra_z(n)
   n.times do
     print "*"
   end
+  puts ""
 end
 
+def letra_x(n)
+  # Sección de arriba
+  (n-(n-1)).times do
+    print "*"
+    (n-2).times do
+      print " "
+    end
+    print "*"
+  end
+  
+  puts ""
+  
+  # Sección del medio
+  (n-2).times do |i| # Filas
+    print " "
+    reverse = n - 2
+    (n-2).times do |j| # Columnas
+      reverse -= 1
+      if i == j
+        print  "*"
+      elsif i == reverse
+        print "*"
+      else
+        print " "
+      end
+    end #Cierre ciclo anidado
+    puts " "
+  end #Cierre ciclo padre
+  
+  # Sección de abajo
+  (n-(n-1)).times do
+    print "*"
+    (n-2).times do
+      print " "
+    end
+    print "*"
+  end
+  puts ""
+end
 
+def numero_cero(n)
+  # Sección de arriba
+  n.times do
+    print "*"
+  end
+  
+  puts ""
+  
+  # Sección del medio
+  (n-2).times do |i| # Filas
+    print "*"
+    (n-2).times do |j| # Columnas
+      if i == j
+        print  "*"
+      else
+        print " "
+      end
+    end #Cierre ciclo anidado
+    puts "*"
+  end #Cierre ciclo padre
+  
+  # Sección de abajo
+  n.times do
+    print "*"
+  end
+  puts ""
+end
 
-# Llamado de metodos
+def navidad(n)
+
+end
+
+# Llamado de métodos
 
 input = ARGV[0].to_i
 
@@ -138,4 +211,10 @@ input = ARGV[0].to_i
 # puts ""
 # letra_i(input)
 # puts ""
-letra_z(input)
+# letra_z(input)
+# puts ""
+# letra_x(input)
+# puts ""
+# numero_cero(input)
+# puts ""
+navidad(input)
