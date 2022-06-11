@@ -46,10 +46,11 @@
 
   f. Método navidad(n)
   n = 5
-     *
-    * *
-   * * *
-  * * * *
+     *0
+    * *1
+   * * *2
+  * * * *3
+  0123456
      *
      *
    * * *
@@ -200,7 +201,26 @@ def numero_cero(n)
 end
 
 def navidad(n)
+  # Sección de arriba
+  (n/2+2).times do |i|
+    reverse = ((n/2)+2)
+    (n+2).times do |j|
+      # print i
+      # print j
 
+      reverse -= 1
+      # print reverse
+      if i == reverse
+        print "*"
+      elsif i == (j-4)
+        print "*"
+      else
+        print " "
+      end
+
+    end
+    puts ""
+  end
 end
 
 # Llamado de métodos
