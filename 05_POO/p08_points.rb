@@ -9,7 +9,8 @@
 =end
 
 class Point
-  attr_reader :x, :y
+  # attr_reader :x, :y
+  attr_accessor :x, :y
 
   def initialize(x,y)
     @x = x
