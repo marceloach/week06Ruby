@@ -1,3 +1,4 @@
+# https://github.com/gosu/gosu/wiki/Ruby-Tutorial
 require "gosu"
 require_relative "player"
 require_relative "zorder"
