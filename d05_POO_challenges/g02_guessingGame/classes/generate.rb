@@ -1,14 +1,18 @@
 require 'faker'
+require 'rest-client'   
+require 'json'
 
 class GeneradorPalabras
 
   def self.generar
-    elegir_al_azar = rand(0..1)
+    elegir_al_azar = rand(0..2)
     case elegir_al_azar
     when 0
-      return generar_lenguajes    
-    else
+      return generar_lenguajes  
+    when 1
       return generar_frutas
+    else
+      return generar_diccionario
     end
   end
 
@@ -21,6 +25,13 @@ class GeneradorPalabras
 
   def self.generar_frutas
     return Faker::Food.fruits
+  end
+
+  def self.generar_diccionario
+    url = "https://random-word-api.herokuapp.com/all"
+    response = RestClient.get(url)
+    array = JSON.parse(response.to_str)
+    array.sample
   end
   
 end
